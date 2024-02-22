@@ -23,11 +23,19 @@ public class Chess {
                 }
             }
         }
+
         return queen(bord , x , y);
     }
     public static String[][] queen(String[][] matrix , int cordinate_x , int cordinate_y){
 
         matrix[cordinate_x][cordinate_y] = "♟️";
+        for(String[] str1 : matrix){
+            for(String str : str1){
+                System.out.print(str);
+            }
+            System.out.println();
+        }
+        System.out.println();
         return damage(matrix , cordinate_x , cordinate_y);
     }
     public static String[][] damage(String[][] matrix , int x , int y){
